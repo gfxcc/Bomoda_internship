@@ -20,4 +20,4 @@ void doit(char *text);
 int init(struct Filter *rule, char *rule_file_path);
 void apply_rule(struct Filter *rule, int rule_count,
         vector *res, char *input_file_path);
-
+void Filter_free(struct Filter *filter);

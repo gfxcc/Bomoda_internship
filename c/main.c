@@ -23,6 +23,12 @@ int main (int argc, char* argv[]) {
         }
         printf("]\n\n\n");
     }
+
+
+    for (i = 0; i < rule_count; i++) {
+        vector_free(res + i);
+        Filter_free(filter + i);
+    }
     free(filter);
 
     exit(EXIT_SUCCESS);

@@ -88,6 +88,10 @@ void vector_delete(vector *v, int index)
 
 void vector_free(vector *v)
 {
+    int i;
+    for (i = 0; i < vector_count(v); i++) {
+        free(vector_get(v, i));
+    }
     free(v->data);
 
 }

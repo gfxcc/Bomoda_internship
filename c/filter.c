@@ -146,6 +146,12 @@ for (i = 0; i < rule_count; i++) {
 
 }
 
+void Filter_free(struct Filter *filter) {
+    free(filter->brand_id);
+    free(filter->category);
+
+}
+
 /* Parse text to JSON, then render back to text, and print! */
 void doit(char *text)
 {
